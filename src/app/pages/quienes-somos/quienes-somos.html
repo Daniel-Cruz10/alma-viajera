@@ -1,0 +1,147 @@
+<main class="pagina-quienes-somos">
+
+  <!-- PRESENTACIÓN DE ALMA VIAJERA -->
+  <section class="sobre-nosotros">
+    <div class="container">
+      <div class="row align-items-center g-4 g-lg-5">
+
+        <div class="col-lg-6">
+          <div class="sobre-nosotros-contenido">
+
+            <p class="etiqueta-seccion">
+              CONOCE NUESTRA ESENCIA
+            </p>
+
+            <h1 class="quienes-titulo">
+              QUIÉNES SOMOS
+            </h1>
+
+            <p>
+              En Alma Viajera creemos que cada viaje es una
+              oportunidad para descubrir nuevos lugares,
+              compartir momentos y crear recuerdos que nos
+              acompañen toda la vida.
+            </p>
+
+            <p>
+              Nos inspira la magia de explorar, conectar con
+              otras culturas y vivir experiencias que van
+              mucho más allá de llegar a un destino.
+            </p>
+
+            <a
+              class="btn btn-alma"
+              routerLink="/destinos">
+              Descubre nuestros destinos
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="sobre-nosotros-imagen">
+            <img
+              src="/images/quienes-somos/playa-principal.jpg"
+              alt="Paisaje de una playa tropical del Caribe">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- POR QUÉ ELEGIRNOS -->
+  <section class="por-que-elegirnos">
+    <div class="container">
+
+      <div class="row align-items-start g-4 mb-4">
+
+        <div class="col-lg-5">
+          <h2 class="quienes-titulo">
+            POR QUÉ ELEGIRNOS
+          </h2>
+        </div>
+
+        <div class="col-lg-7">
+          <p class="por-que-descripcion">
+            Queremos que cada aventura sea una experiencia
+            para disfrutar, descubrir y compartir. Por eso
+            buscamos destinos inspiradores y planes que
+            conviertan cada momento en algo especial.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="galeria-quienes">
+
+        <div class="galeria-quienes-item">
+          <img
+            src="/images/quienes-somos/por-que-1.jpg"
+            alt="Playa de aguas cristalinas">
+        </div>
+
+        <div class="galeria-quienes-item">
+          <img
+            src="/images/quienes-somos/por-que-2.jpg"
+            alt="Paisaje tropical para disfrutar de un viaje">
+        </div>
+
+        <div class="galeria-quienes-item">
+          <img
+            src="/images/quienes-somos/por-que-3.jpg"
+            alt="Destino turístico rodeado de naturaleza">
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- BENEFICIOS -->
+  <section class="futuro-caribe">
+    <div class="container">
+
+      <div class="futuro-caribe-encabezado">
+        <h2 class="quienes-titulo">
+          CONSTRUYENDO EL FUTURO
+          DEL TURISMO CARIBEÑO
+        </h2>
+
+        <p>
+          Nos mueve la pasión por viajar y la posibilidad
+          de crear experiencias que conecten a las personas
+          con los destinos y con sus propias historias.
+        </p>
+      </div>
+
+      <div class="row g-4 beneficios-grid">
+
+        <div
+          class="col-md-4"
+          *ngFor="let beneficio of beneficios">
+
+          <article class="beneficio-item">
+
+            <div class="beneficio-icono">
+              <span aria-hidden="true">
+                {{ beneficio.icono }}
+              </span>
+            </div>
+
+            <h3>{{ beneficio.titulo }}</h3>
+
+            <p>{{ beneficio.descripcion }}</p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>

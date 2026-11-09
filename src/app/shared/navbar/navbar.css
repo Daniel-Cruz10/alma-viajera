@@ -1,0 +1,89 @@
+
+:host {
+  display: block;
+}
+
+/* Encabezado de la marca */
+
+.navbar-alma {
+  min-height: 68px;
+  padding: 0.65rem 0;
+
+  background-color: #ffffff;
+  border-top: 1px solid #e6c8ef;
+  border-bottom: 1px solid #f2e7f5;
+}
+
+.navbar-alma .container {
+  gap: 1rem;
+}
+
+/* Nombre provisional de la marca */
+
+.marca-alma {
+  display: inline-flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  color: var(--alma-morado);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.marca-alma:hover {
+  color: var(--alma-morado);
+}
+
+/* Menú */
+
+.navbar-alma .navbar-nav {
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.navbar-alma .nav-link {
+  padding: 0.55rem 0.65rem;
+
+  color: #b64bd0;
+  font-size: 0.73rem;
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+.navbar-alma .nav-link:hover,
+.navbar-alma .nav-link.active {
+  color: var(--alma-morado);
+}
+
+/* Botón para abrir el menú en móvil */
+
+.navbar-alma .navbar-toggler {
+  border-color: #e5c5ee;
+  box-shadow: none;
+}
+
+.navbar-alma .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.15rem rgb(101 0 143 / 15%);
+}
+
+/* Ajustes para tabletas y móviles */
+
+@media (max-width: 991.98px) {
+  .navbar-alma .navbar-collapse {
+    padding-top: 0.75rem;
+  }
+
+  .navbar-alma .navbar-nav {
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .navbar-alma .nav-link {
+    padding: 0.65rem 0.25rem;
+    font-size: 0.85rem;
+  }
+}

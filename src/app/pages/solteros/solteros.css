@@ -1,0 +1,114 @@
+.pagina-solteros .experiencia-hero {
+  background: #46105d;
+}
+
+.pagina-solteros .experiencia-hero-capa {
+  background: linear-gradient(
+    90deg,
+    rgb(58 10 80 / 88%) 0%,
+    rgb(94 30 113 / 58%) 55%,
+    rgb(94 30 113 / 10%) 100%
+  );
+}
+
+.solteros-pilares {
+  padding: 3.5rem 0;
+  background: #faf5fc;
+}
+
+.solteros-pilar {
+  height: 100%;
+  padding: 1.8rem 1.3rem;
+
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #f0e3f5;
+  border-radius: 10px;
+}
+
+.solteros-pilar-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.2rem;
+
+  color: #f6efa0;
+  background: var(--alma-morado);
+  border-radius: 50%;
+  font-size: 1.8rem;
+}
+
+.solteros-pilar h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.solteros-pilar p {
+  margin: 0;
+  font-size: 0.87rem;
+  line-height: 1.8;
+}
+
+.solteros-resumen {
+  background: #65008f;
+}
+
+.solteros-fecha {
+  background: linear-gradient(
+    120deg,
+    #f6d9e8,
+    #f3eafa,
+    #eaf7fb
+  );
+}
+
+.solteros-cierre {
+  padding: 4rem 0;
+  text-align: center;
+  background: var(--alma-morado);
+}
+
+.solteros-cierre h2 {
+  max-width: 800px;
+  margin: 0 auto 1rem;
+
+  color: #ffffff;
+  font-size: clamp(1.7rem, 4vw, 2.7rem);
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.solteros-cierre > .container > p:not(.experiencia-etiqueta) {
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+
+  color: #ffffff;
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 767.98px) {
+  .pagina-solteros .experiencia-hero-capa {
+    background: linear-gradient(
+      0deg,
+      rgb(58 10 80 / 88%) 0%,
+      rgb(94 30 113 / 42%) 100%
+    );
+  }
+
+  .solteros-pilares {
+    padding: 2.5rem 0;
+  }
+
+  .solteros-pilar {
+    padding: 1.5rem 1rem;
+  }
+
+  .solteros-cierre {
+    padding: 3rem 0;
+  }
+}

@@ -1,0 +1,26 @@
+.pagina-quinceaneras .experiencia-hero {
+  background: #185c91;
+}
+
+.pagina-quinceaneras .experiencia-hero-capa {
+  background: linear-gradient(
+    90deg,
+    rgb(12 52 94 / 87%) 0%,
+    rgb(21 81 128 / 58%) 55%,
+    rgb(21 81 128 / 10%) 100%
+  );
+}
+
+.pagina-quinceaneras .experiencia-fecha-banner {
+  background: #eaf7fb;
+}
+
+@media (max-width: 767.98px) {
+  .pagina-quinceaneras .experiencia-hero-capa {
+    background: linear-gradient(
+      0deg,
+      rgb(12 52 94 / 88%) 0%,
+      rgb(21 81 128 / 42%) 100%
+    );
+  }
+}

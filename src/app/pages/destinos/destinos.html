@@ -1,0 +1,245 @@
+<main class="pagina-destinos">
+
+  <!-- ENCABEZADO -->
+  <section class="destinos-encabezado">
+    <div class="container">
+
+      <div class="destinos-titulo-contenedor">
+
+        <span class="destinos-icono" aria-hidden="true">
+          📍
+        </span>
+
+        <div>
+          <p class="etiqueta-seccion">
+            EL MUNDO TE ESPERA
+          </p>
+
+          <h1 class="destinos-titulo">
+            DESTINOS
+          </h1>
+        </div>
+
+      </div>
+
+      <p class="destinos-introduccion">
+        Descubre lugares extraordinarios, déjate sorprender
+        por nuevos paisajes y encuentra la inspiración para
+        tu próxima aventura.
+      </p>
+      
+<!-- INFORMACIÓN DE LA TRM -->
+<div class="destinos-tasa-panel" aria-live="polite">
+
+  <div class="tasa-informacion">
+
+    <span class="tasa-etiqueta">
+      TASA DE CAMBIO DE REFERENCIA
+    </span>
+
+    <strong *ngIf="trm() as tasa">
+      1 USD =
+      {{ tasa.valor | currency:'COP':'symbol-narrow':'1.0-0':'es-CO' }}
+      COP
+    </strong>
+
+    <p *ngIf="cargandoTRM">
+      Consultando la tasa de cambio...
+    </p>
+
+    <p *ngIf="errorTRM() && !trm()">
+      No fue posible consultar el dólar.
+      Los precios en COP continúan disponibles.
+    </p>
+
+    <p *ngIf="errorTRM() && trm()">
+      No se pudo actualizar la tasa.
+      Se conserva el último dato recibido.
+    </p>
+
+    <small *ngIf="trm() as tasa">
+      Fecha de referencia: {{ tasa.fechaActualizacion }}
+    </small>
+
+  </div>
+
+  <button
+    type="button"
+    class="btn btn-alma tasa-boton"
+    (click)="actualizarTRM()"
+    [disabled]="cargandoTRM()">
+
+    {{ cargandoTRM() ? 'Actualizando...' : 'Actualizar dólar' }}
+
+  </button>
+
+  <a
+    class="tasa-fuente"
+    href="https://dolarapi.com/docs/colombia/operations/get-trm"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    Fuente: DolarApi
+
+  </a>
+
+</div>
+
+
+    </div>
+  </section>
+
+
+  <!-- LISTADO DINÁMICO -->
+  <section class="destinos-listado">
+    <div class="container">
+
+      <article
+        class="destino-bloque"
+        *ngFor="let destino of destinos; let i = index"
+        [attr.id]="'destino-' + destino.slug">
+
+        <div
+          class="row align-items-center g-4 g-lg-5"
+          [class.flex-lg-row-reverse]="i % 2 === 1">
+
+          <!-- IMAGEN -->
+          <div class="col-lg-6">
+
+            <div class="destino-imagen">
+              <img
+                [src]="destino.imagenPrincipal"
+                [alt]="'Paisaje de ' + destino.nombre"
+                loading="lazy">
+            </div>
+
+          </div>
+
+          <!-- INFORMACIÓN -->
+          <div class="col-lg-6">
+
+            <div class="destino-contenido">
+
+              <p class="destino-numero">
+                DESTINO {{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}
+              </p>
+
+              <h2 class="destino-titulo">
+                {{ destino.nombre }}
+              </h2>
+
+              <p class="destino-descripcion">
+                {{ destino.descripcion }}
+              </p>
+              
+<!-- PRECIOS DEL DESTINO -->
+<div class="destino-precios">
+
+  <!-- Precio en pesos -->
+  <div class="precio-item">
+
+    <span>Precio en pesos colombianos (COP)</span>
+
+    <strong>
+      {{ destino.precioCOP | currency:'COP':'symbol-narrow':'1.0-0':'es-CO' }}
+    </strong>
+
+  </div>
+
+  <!-- Precio convertido a dólares -->
+  <div class="precio-item" *ngIf="trm() as tasa">
+
+    <span>Equivalente aproximado en dólares (USD)</span>
+
+    <strong>
+      {{
+        (destino.precioCOP / tasa.valor)
+          | currency:'USD':'symbol':'1.2-2':'en-US'
+      }}
+    </strong>
+
+  </div>
+
+  <p class="precio-aviso" *ngIf="!trm()">
+    El precio en USD estará disponible cuando se
+    consulte la tasa de cambio.
+  </p>
+
+</div>
+
+
+              <ul class="destino-caracteristicas">
+
+                <li
+                  *ngFor="let caracteristica of destino.caracteristicas">
+
+                  {{ caracteristica }}
+
+                </li>
+
+              </ul>
+
+              <!-- Enlaces a las experiencias que ya existen -->
+              <div class="destino-acciones">
+
+                <a
+                  *ngIf="destino.slug === 'san-andres'"
+                  class="btn btn-alma"
+                  routerLink="/quinceaneras">
+                  Ver experiencia de quinceañeras
+                </a>
+
+                <a
+                  *ngIf="destino.slug === 'cartagena'"
+                  class="btn btn-alma"
+                  routerLink="/solteros">
+                  Descubrir el plan para solteros
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- LLAMADA FINAL -->
+  <section class="destinos-cierre">
+    <div class="container">
+
+      <h2>
+        TU PRÓXIMA AVENTURA COMIENZA AQUÍ
+      </h2>
+
+      <p>
+        Explora nuestras experiencias y encuentra la
+        inspiración para tu próximo viaje.
+      </p>
+
+      <div class="destinos-cierre-acciones">
+
+        <a
+          class="btn btn-alma"
+          routerLink="/quinceaneras">
+          Quinceañeras
+        </a>
+
+        <a
+          class="btn btn-alma"
+          routerLink="/solteros">
+          Plan para solteros
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>

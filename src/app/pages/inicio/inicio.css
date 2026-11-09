@@ -1,0 +1,148 @@
+
+/* ========================================
+   INICIO - PORTADA PRINCIPAL
+   ======================================== */
+
+.hero-inicio {
+  padding: clamp(2.5rem, 6vw, 5rem) 0;
+  background-color: #ffffff;
+}
+
+.hero-contenido {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-titulo {
+  margin: 0;
+
+  color: var(--alma-morado);
+  font-size: clamp(2rem, 3.5vw, 3.15rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+}
+
+.hero-descripcion {
+  max-width: 440px;
+  margin: 1.25rem auto 1.5rem;
+
+  color: var(--alma-texto);
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+.hero-imagen-contenedor {
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--alma-radio);
+}
+
+.hero-imagen {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: var(--alma-radio);
+}
+
+
+/* ========================================
+   INICIO - SECCIÓN PROMOCIONAL
+   ======================================== */
+
+.home-promocion {
+  padding: clamp(3rem, 6vw, 4.5rem) 0;
+
+  background: linear-gradient(
+    115deg,
+    #f6efa0 0%,
+    #eaf5d2 48%,
+    #f6d9e8 100%
+  );
+}
+
+.promocion-contenido {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.promocion-introduccion {
+  margin-bottom: 0.8rem;
+
+  color: var(--alma-morado);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.promocion-titulo {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+
+  color: var(--alma-morado);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 991.98px) {
+  .hero-inicio {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-contenido {
+    max-width: 560px;
+  }
+
+  .hero-titulo {
+    font-size: clamp(1.9rem, 5vw, 2.7rem);
+  }
+
+  .hero-imagen {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-inicio {
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero-titulo {
+    font-size: 1.8rem;
+    line-height: 1.12;
+  }
+
+  .hero-descripcion {
+    font-size: 0.88rem;
+  }
+
+  .hero-contenido .btn-alma,
+  .promocion-contenido .btn-alma {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .home-promocion {
+    padding: 2.75rem 0;
+  }
+
+  .promocion-titulo {
+    font-size: 1.65rem;
+  }
+}

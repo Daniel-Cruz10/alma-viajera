@@ -1,0 +1,409 @@
+
+/* ========================================
+   ALMA VIAJERA - ESTILOS GLOBALES
+   ======================================== */
+
+:root {
+  --alma-morado: #65008f;
+  --alma-rosa: #d8a1e7;
+  --alma-verde-claro: #f3f9ef;
+  --alma-amarillo: #f6efa0;
+  --alma-turquesa: #17bce1;
+
+  --alma-texto: #38323c;
+  --alma-blanco: #ffffff;
+
+  --alma-radio: 14px;
+  --alma-ancho-contenido: 1140px;
+}
+
+/* Reinicio básico */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--alma-texto);
+  background-color: var(--alma-blanco);
+
+  font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Títulos generales */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--alma-morado);
+  font-weight: 800;
+}
+
+/* Botón principal de la marca */
+
+.btn-alma {
+  display: inline-block;
+  padding: 0.65rem 1.3rem;
+
+  color: var(--alma-blanco);
+  background-color: var(--alma-morado);
+
+  border: 1px solid var(--alma-morado);
+  border-radius: 6px;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn-alma:hover {
+  color: var(--alma-morado);
+  background-color: var(--alma-blanco);
+
+  transform: translateY(-2px);
+}
+
+.btn-alma:focus-visible {
+  outline: 3px solid var(--alma-rosa);
+  outline-offset: 3px;
+}
+
+/* ========================================
+   ALMA VIAJERA - PÁGINAS DE EXPERIENCIAS
+   ======================================== */
+
+.experiencia-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  min-height: 430px;
+  overflow: hidden;
+
+  color: #ffffff;
+  background: #174d75;
+}
+
+.experiencia-hero-imagen {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.experiencia-hero-capa {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgb(16 60 105 / 88%) 0%,
+    rgb(20 80 130 / 62%) 52%,
+    rgb(20 80 130 / 12%) 100%
+  );
+}
+
+.experiencia-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.experiencia-hero-contenido {
+  max-width: 650px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.experiencia-etiqueta {
+  margin-bottom: 1rem;
+  color: #f8e9a3;
+
+  font-size: 0.77rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.experiencia-hero-titulo {
+  margin-bottom: 1.25rem;
+
+  color: #ffffff;
+  font-size: clamp(2.1rem, 5vw, 4rem);
+  line-height: 1.06;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.experiencia-hero-descripcion {
+  max-width: 540px;
+  margin-bottom: 1.5rem;
+
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.btn-alma-claro {
+  display: inline-block;
+  padding: 0.7rem 1.3rem;
+
+  color: var(--alma-morado);
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.btn-alma-claro:hover {
+  color: var(--alma-morado);
+  transform: translateY(-2px);
+}
+
+.experiencia-introduccion {
+  max-width: 880px;
+  margin: 0 auto;
+  padding-top: 4rem;
+  padding-bottom: 2.5rem;
+  text-align: center;
+}
+
+.experiencia-subtitulo {
+  max-width: 800px;
+  margin: 0 auto 1rem;
+
+  color: var(--alma-morado);
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  font-weight: 900;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.experiencia-texto {
+  max-width: 740px;
+  margin: 0 auto;
+
+  font-size: 0.92rem;
+  line-height: 1.85;
+}
+
+.experiencia-galeria {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+  padding-bottom: 4rem;
+}
+
+.experiencia-galeria-item {
+  overflow: hidden;
+  border-radius: 9px;
+}
+
+.experiencia-galeria-item img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.experiencia-galeria-item:hover img {
+  transform: scale(1.05);
+}
+
+.experiencia-resumen {
+  margin-bottom: 3rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+
+  color: #ffffff;
+  background: var(--alma-morado);
+  border-radius: 10px;
+}
+
+.experiencia-resumen-etiqueta {
+  margin-bottom: 0.6rem;
+  color: #f6efa0;
+
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.experiencia-resumen h2 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 900;
+}
+
+.experiencia-resumen p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.experiencia-fecha-banner {
+  margin-bottom: 4rem;
+  padding: 2rem;
+
+  text-align: center;
+  background: #eaf7fb;
+  border-radius: 10px;
+}
+
+.experiencia-fecha-banner h2 {
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  font-weight: 900;
+}
+
+.experiencia-fecha-banner p {
+  max-width: 730px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.experiencia-listas {
+  padding-bottom: 4rem;
+}
+
+.experiencia-lista-panel {
+  height: 100%;
+  padding: 1.7rem;
+  border-radius: 10px;
+}
+
+.experiencia-lista-incluye {
+  color: #ffffff;
+  background: #12b9d9;
+}
+
+.experiencia-lista-actividades {
+  color: #ffffff;
+  background: #1676cc;
+}
+
+.experiencia-lista-panel h2 {
+  margin-bottom: 1.2rem;
+
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.experiencia-lista-panel ul {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experiencia-lista-panel li {
+  position: relative;
+  padding-left: 1.5rem;
+
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.experiencia-lista-panel li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 900;
+}
+
+.experiencia-pie {
+  padding: 2rem 0;
+  text-align: center;
+  background: #f7f2fa;
+}
+
+.experiencia-pie p {
+  margin: 0;
+  color: var(--alma-morado);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+@media (max-width: 767.98px) {
+  .experiencia-hero {
+    min-height: 400px;
+  }
+
+  .experiencia-hero-capa {
+    background: linear-gradient(
+      0deg,
+      rgb(16 60 105 / 88%) 0%,
+      rgb(20 80 130 / 48%) 100%
+    );
+  }
+
+  .experiencia-hero-contenido {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .experiencia-hero-titulo {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .experiencia-galeria {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .experiencia-galeria-item img {
+    aspect-ratio: 4 / 5;
+  }
+
+  .experiencia-introduccion {
+    padding-top: 2.75rem;
+    padding-bottom: 2rem;
+  }
+
+  .experiencia-resumen {
+    margin-bottom: 2rem;
+  }
+
+  .experiencia-fecha-banner {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .experiencia-listas {
+    padding-bottom: 2.5rem;
+  }
+}

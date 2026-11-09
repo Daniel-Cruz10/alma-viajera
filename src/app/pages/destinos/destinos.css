@@ -1,0 +1,313 @@
+.destinos-encabezado {
+  padding: 3.5rem 0 2.5rem;
+  background: #ffffff;
+}
+
+.destinos-titulo-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.destinos-icono {
+  font-size: 2rem;
+}
+
+.destinos-titulo {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  line-height: 1;
+  font-weight: 900;
+}
+
+.destinos-titulo-contenedor .etiqueta-seccion {
+  margin-bottom: 0.45rem;
+}
+
+.destinos-introduccion {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+.destinos-listado {
+  padding: 1rem 0 4rem;
+  background: #ffffff;
+}
+
+.destino-bloque {
+  padding: 2.5rem 0;
+  scroll-margin-top: 85px;
+}
+
+.destino-bloque + .destino-bloque {
+  border-top: 1px solid #f0e6f3;
+}
+
+.destino-imagen {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.destino-imagen img {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.destino-imagen:hover img {
+  transform: scale(1.035);
+}
+
+.destino-contenido {
+  max-width: 500px;
+  padding: 0.5rem;
+}
+
+.destino-numero {
+  margin-bottom: 0.6rem;
+  color: #b64bd0;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+}
+
+.destino-titulo {
+  margin-bottom: 1rem;
+  color: var(--alma-morado);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 900;
+}
+
+.destino-descripcion {
+  margin-bottom: 1.25rem;
+  font-size: 0.91rem;
+  line-height: 1.8;
+}
+
+.destino-caracteristicas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.destino-caracteristicas li {
+  padding: 0.45rem 0.7rem;
+
+  color: var(--alma-morado);
+  background: #f7eefb;
+  border-radius: 5px;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.destino-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.destinos-cierre {
+  padding: 3.5rem 0;
+  text-align: center;
+
+  background: linear-gradient(
+    115deg,
+    #f6efa0 0%,
+    #eaf5d2 48%,
+    #f6d9e8 100%
+  );
+}
+
+.destinos-cierre h2 {
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  font-weight: 900;
+}
+
+.destinos-cierre p {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.destinos-cierre-acciones {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+@media (max-width: 767.98px) {
+  .destinos-encabezado {
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .destinos-listado {
+    padding-bottom: 2rem;
+  }
+
+  .destino-bloque {
+    padding: 1.75rem 0;
+  }
+
+  .destino-contenido {
+    padding: 0.5rem 0;
+  }
+
+  .destino-acciones .btn {
+    width: 100%;
+  }
+
+  .destinos-cierre-acciones {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .destinos-cierre-acciones .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ========================================
+   TASA DE CAMBIO - API DEL DÓLAR
+   ======================================== */
+
+.destinos-tasa-panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+
+  max-width: 850px;
+  margin: 2rem auto 0;
+  padding: 1.3rem 1.5rem;
+
+  background: #f8f1fb;
+  border: 1px solid #ead7f1;
+  border-radius: 10px;
+}
+
+.tasa-informacion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.tasa-etiqueta {
+  color: #a54ac1;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.tasa-informacion strong {
+  color: var(--alma-morado);
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.tasa-informacion p,
+.tasa-informacion small {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.tasa-boton {
+  white-space: nowrap;
+}
+
+.tasa-fuente {
+  width: 100%;
+  color: var(--alma-morado);
+  font-size: 0.72rem;
+  text-decoration: underline;
+}
+
+
+/* ========================================
+   PRECIOS DE LOS DESTINOS
+   ======================================== */
+
+.destino-precios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  margin: 1.4rem 0;
+  padding: 1rem;
+
+  background: #f8f5fa;
+  border-left: 4px solid var(--alma-morado);
+  border-radius: 5px;
+}
+
+.precio-item {
+  display: flex;
+  flex: 1 1 190px;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.precio-item span {
+  color: #756a7c;
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+.precio-item strong {
+  color: var(--alma-morado);
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.precio-aviso {
+  width: 100%;
+  margin: 0;
+  color: #756a7c;
+  font-size: 0.78rem;
+}
+
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 575.98px) {
+
+  .destinos-tasa-panel {
+    align-items: stretch;
+    padding: 1.1rem;
+  }
+
+  .tasa-informacion strong {
+    font-size: 1.2rem;
+  }
+
+  .tasa-boton {
+    width: 100%;
+  }
+
+  .destino-precios {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .precio-item strong {
+    font-size: 1.15rem;
+  }
+
+}
